@@ -1,0 +1,118 @@
+/* the client's brand kit (Alibio, sea kit) through start.mjs brand: ivory ground, charcoal ink, navy brand band;
+   the action is the kit's blue green (#076d6f, 5.1:1 on the ivory, its ivory label 5.1:1) */
+:root {
+  --p-bg: #f3e9df; --p-surface: #e7ddd4; --p-ink: #1e1c1c; --p-muted: #605c59;
+  --p-accent: #013160; --p-accent-ink: #f3e9df; --p-action: #076d6f; --p-action-ink: #f3e9df;
+  --p-inv-bg: #1e1c1c; --p-inv-surface: #2a2827; --p-inv-ink: #f3e9df; --p-inv-muted: #9a948e;
+  --p-inv-accent: #f3e9df; --p-inv-accent-ink: #1e1c1c; --p-inv-action: #f3e9df; --p-inv-action-ink: #1e1c1c;
+  --font-display: "TT Ramillas", "Literata", Georgia, serif;
+  --font-text: "Proxima Nova", "proxima-nova", "Figtree", system-ui, sans-serif;
+  --display-weight: 400;
+  --display-tracking: -0.02em;
+}
+/* the brand kit's faces: TT Ramillas (headings) and Proxima Nova (text). Both are paid fonts: put the licensed web
+   files in assets/fonts/ under these names (assets/fonts/README.md). Until they are there, an installed copy is used
+   through local(), else Literata and Figtree stand in. */
+@font-face { font-family: "TT Ramillas"; font-weight: 400; font-style: normal; font-display: swap;
+  src: local("TT Ramillas"), local("TTRamillas-Regular"), url("fonts/TTRamillas-Regular.woff2") format("woff2"); }
+@font-face { font-family: "Proxima Nova"; font-weight: 400; font-style: normal; font-display: swap;
+  src: local("Proxima Nova"), local("ProximaNova-Regular"), url("fonts/ProximaNova-Regular.woff2") format("woff2"); }
+@font-face { font-family: "Proxima Nova"; font-weight: 500; font-style: normal; font-display: swap;
+  src: local("Proxima Nova Medium"), local("ProximaNova-Medium"), url("fonts/ProximaNova-Medium.woff2") format("woff2"); }
+
+  /* page CSS */
+  /* condo card: name, price a night, city and facts, the Airbnb link; one line each so a row lines up */
+  .tile__name { margin: 0; font: 500 var(--t-card)/1.3 var(--font-text); letter-spacing: -0.01em; }
+  .tile__price { margin: calc(-1 * var(--s-3)) 0 0; font-variant-numeric: tabular-nums; }
+  .tile__facts { font-size: 16px; line-height: 24px; margin: 0; color: var(--muted); }
+  .tile__book { display: inline-flex; align-items: center; gap: 8px; font-weight: 500; }
+  .tile__book .ic { width: 20px; height: 20px; }
+  /* the hero photograph takes what the words leave of the first screen */
+  @media (min-width: 1024px) { .hero.hero--place { --photo: max(min(480px, 53svh), calc(100svh - 300px)); } }
+  /* the booking statement is the page's type moment: set large across the wrap */
+  #booking .mo-wh__text { font-size: clamp(32px, 4.4vw, 64px); line-height: 1.12; max-width: 1100px; }
+  /* the districts are the panel's content: ink, the district in 500, the map link at the right */
+  .visit__districts > li > :first-child { color: var(--ink); }
+  .visit__district { font-weight: 500; }
+  .visit .t-label + .visit__rows { margin-top: calc(-1 * var(--s-2)); }
+  /* the brand kit's logos (brand board page 4): the mark-and-wordmark lockup in the nav, the primary logo in the footer */
+  .nav__logo .logo-lockup { height: 32px; width: auto; }
+  .nav__logo .logo-primary { height: 88px; width: auto; }
+  @media (max-width: 639px) { .nav__logo .logo-lockup { height: 28px; } .nav__logo .logo-primary { height: 72px; } }
+  /* the six condos as two trios: one trio a screen from 1024 (.g2), both trios on one tablet screen, a list of
+     three a screen on a phone (.g2m) */
+  #homes .homes__trio { grid-template-columns: repeat(3, minmax(0, 1fr)); align-content: start; }
+  #homes .homes__trio > .tile { grid-column: auto; }
+  .condo { transition: transform 300ms var(--ease, ease); }
+  .condo .tile__media > img { transition: transform 600ms var(--ease, ease); }
+  @media (hover: hover) and (pointer: fine) {
+    .condo:hover { transform: translateY(-2px); }
+    .condo:hover .tile__media > img { transform: scale(1.03); }
+  }
+  .tile__actions { display: flex; flex-wrap: wrap; align-items: center; gap: var(--s-2) var(--s-5); min-height: 44px; }
+  .tile__details { background: none; border: 0; padding: 0; font: inherit; font-weight: 500; color: var(--action); cursor: pointer; min-height: 44px; }
+  @media (min-width: 640px) and (max-width: 1023px) {
+    #homes { --h: 1; }
+    #homes > .wrap { display: flex; flex-direction: column; row-gap: var(--s-5); }
+    #homes .tile__media { --tile-ratio: 2 / 1; }
+    #visit .pl-photo > img { aspect-ratio: 2 / 1; object-fit: cover; }
+    #cities .cities__pair { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    #cities .cities__pair > .cities__photo { grid-column: auto; aspect-ratio: 3 / 5; }
+  }
+  @media (max-width: 639px) {
+    #homes .homes__trio { grid-template-columns: minmax(0, 1fr); row-gap: var(--s-4); }
+    #homes .homes__trio > .tile { grid-template-columns: 96px minmax(0, 1fr); column-gap: var(--s-4); row-gap: var(--s-1); }
+    #homes .tile__book .ic { display: none; }
+    #homes .tile__media { --tile-ratio: 4 / 5; grid-column: 1; grid-row: 1 / span 4; }
+    #homes .tile > :not(.tile__media) { grid-column: 2; }
+    #homes .tile__name { font-size: 18px; }
+    #homes .tile__price { margin: 0; }
+    #homes .tile__actions { column-gap: var(--s-4); flex-wrap: nowrap; min-height: 0; }
+    /* the whole card opens its details drawer; "See details" stays the button's name, the Airbnb link sits above it */
+    .condo { position: relative; }
+    .condo .tile__details { position: static; font-size: 0; line-height: 0; min-height: 0; }
+    .condo .tile__details::after { content: ""; position: absolute; inset: 0; z-index: 1; }
+    .condo .tile__book { position: relative; z-index: 2; min-height: 44px; }
+    #visit .pl-photo > img { aspect-ratio: 3 / 1; max-height: none; flex: none; object-fit: cover; }
+    #visit .visit__rows > li { flex-direction: row; align-items: center; justify-content: space-between; } #visit .visit__rows > li > :last-child { text-align: right; }
+  }
+
+/* city and beach: the head, then two photographs on span-6 at one ratio (place composition "pair") */
+#cities .cities__pair { align-items: start; }
+#cities .cities__photo { margin: 0; overflow: clip; aspect-ratio: 4 / 3; }
+#cities .cities__photo > img { width: 100%; height: 100%; max-width: none; object-fit: cover; }
+@media (max-width: 639px) { #cities .cities__photo { aspect-ratio: 16 / 9; } }
+
+/* condo details: a centred dialog from 640 (Radix), a bottom drawer on a phone (Vaul); the kit's tokens */
+.details__overlay { position: fixed; inset: 0; z-index: 60; background: rgb(30 28 28 / .5); }
+.details { position: fixed; z-index: 61; background: var(--p-bg); color: var(--p-ink); outline: none; overflow: auto; }
+.details--dialog { left: 50%; top: 50%; transform: translate(-50%, -50%); width: min(960px, calc(100vw - 48px)); max-height: calc(100svh - 48px); border-radius: 2px; }
+.details--drawer { left: 0; right: 0; bottom: 0; max-height: 92svh; border-radius: 12px 12px 0 0; padding-bottom: env(safe-area-inset-bottom); }
+.details__grip { width: 40px; height: 4px; border-radius: 2px; background: color-mix(in oklab, var(--p-ink) 25%, transparent); margin: 12px auto 0; }
+.details__body { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+.details__media { margin: 0; min-height: 100%; }
+.details__media > img { width: 100%; height: 100%; max-width: none; object-fit: cover; display: block; }
+.details__text { padding: var(--s-7); display: grid; gap: var(--s-4); align-content: start; }
+.details__head { display: flex; align-items: start; justify-content: space-between; gap: var(--s-4); }
+.details__title { margin: 0; font: var(--display-weight) 32px/40px var(--font-display); letter-spacing: var(--display-tracking); }
+.details__close { flex: none; display: grid; place-items: center; width: 44px; height: 44px; margin: -8px -8px 0 0; background: none; border: 0; color: var(--p-ink); cursor: pointer; border-radius: 2px; }
+.details__close:hover { background: var(--p-surface); }
+.details__where, .details__summary { margin: 0; }
+.details__where { color: var(--p-muted); margin-top: calc(-1 * var(--s-3)); }
+.details__price { margin: 0; font-size: 20px; line-height: 30px; font-variant-numeric: tabular-nums; }
+.details__facts, .details__amenities { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--s-2) var(--s-5); }
+.details__facts { grid-auto-flow: column; justify-content: start; }
+.details__amenities { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.details__facts li, .details__amenities li { display: flex; align-items: center; gap: var(--s-2); }
+.details__facts svg, .details__amenities svg { flex: none; color: var(--p-action); }
+.details__label { margin: var(--s-2) 0 calc(-1 * var(--s-2)); color: var(--p-muted); }
+.details__book { justify-self: start; gap: var(--s-2); margin-top: var(--s-2); }
+.details__book .ic { width: 20px; height: 20px; background: var(--p-bg); border-radius: 50%; padding: 2px; }
+@media (max-width: 639px) {
+  .details__body { grid-template-columns: minmax(0, 1fr); }
+  .details__media { aspect-ratio: 16 / 9; min-height: 0; }
+  .details__text { padding: var(--s-5) var(--s-5) var(--s-6); }
+  .details__title { font-size: 24px; line-height: 30px; }
+  .details__facts { grid-auto-flow: row; }
+  .details__book { justify-self: stretch; justify-content: center; }
+}

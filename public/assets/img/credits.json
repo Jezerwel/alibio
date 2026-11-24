@@ -1,0 +1,582 @@
+{
+  "note": "Credits for the photographs in this folder: photos.mjs credits prints the footer block for the ones the pages use.",
+  "photos": [
+    {
+      "file": "photo-f118237809-1280.webp",
+      "files": [
+        "photo-f118237809-500.webp",
+        "photo-f118237809-960.webp",
+        "photo-f118237809-1280.webp",
+        "photo-f118237809-780x975.webp"
+      ],
+      "id": "f118237809",
+      "alt": "El Nido Bay, Desert tropical island, Coastline, Palawan Island, Philippines",
+      "by": "Vyacheslav Argenberg",
+      "licence": "CC BY 4.0",
+      "licenceUrl": "https://creativecommons.org/licenses/by/4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:El_Nido_Bay,_Desert_tropical_island,_Coastline,_Palawan_Island,_Philippines.jpg",
+      "source": "Wikimedia Commons"
+    },
+    {
+      "file": "photo-f91432746.webp",
+      "files": [
+        "photo-f91432746-500.webp",
+        "photo-f91432746-960.webp",
+        "photo-f91432746.webp"
+      ],
+      "id": "f91432746",
+      "alt": "Limestone island in Bacuit Bay, El Nido, Palawan, Philippines",
+      "by": "Vyacheslav Argenberg",
+      "licence": "CC BY 4.0",
+      "licenceUrl": "https://creativecommons.org/licenses/by/4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Limestone_island_in_Bacuit_Bay,_El_Nido,_Palawan,_Philippines.jpg",
+      "source": "Wikimedia Commons"
+    },
+    {
+      "file": "photo-f91432747-960.webp",
+      "files": [
+        "photo-f91432747-500.webp",
+        "photo-f91432747-960.webp"
+      ],
+      "id": "f91432747",
+      "alt": "Island lagoon in Bacuit Bay, El Nido, Palawan, Philippines",
+      "by": "Vyacheslav Argenberg",
+      "licence": "CC BY 4.0",
+      "licenceUrl": "https://creativecommons.org/licenses/by/4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Island_lagoon_in_Bacuit_Bay,_El_Nido,_Palawan,_Philippines.jpg",
+      "source": "Wikimedia Commons"
+    },
+    {
+      "file": "photo-f136633870-960.webp",
+      "files": [
+        "photo-f136633870-500.webp",
+        "photo-f136633870-960.webp"
+      ],
+      "id": "f136633870",
+      "alt": "Siargao Island",
+      "by": "CharMel Creations",
+      "licence": "CC BY-SA 4.0",
+      "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Siargao_Island.jpg",
+      "source": "Wikimedia Commons"
+    },
+    {
+      "file": "photo-f104853024.webp",
+      "files": [
+        "photo-f104853024-500.webp",
+        "photo-f104853024-960.webp",
+        "photo-f104853024.webp"
+      ],
+      "id": "f104853024",
+      "alt": "Siargao Cloud 9",
+      "by": "Spraken eboy2887",
+      "licence": "CC BY-SA 4.0",
+      "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Siargao_Cloud_9.jpg",
+      "source": "Wikimedia Commons"
+    },
+    {
+      "file": "photo-f89784455.webp",
+      "files": [
+        "photo-f89784455-500.webp",
+        "photo-f89784455-960.webp",
+        "photo-f89784455.webp"
+      ],
+      "id": "f89784455",
+      "alt": "Huma island,coron, palawan",
+      "by": "Moutaz Kotrob",
+      "licence": "CC BY-SA 4.0",
+      "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Huma_island,coron,_palawan.jpg",
+      "source": "Wikimedia Commons"
+    },
+    {
+      "file": "photo-f136703344.webp",
+      "files": [
+        "photo-f136703344-500.webp",
+        "photo-f136703344-960.webp",
+        "photo-f136703344.webp"
+      ],
+      "id": "f136703344",
+      "alt": "Panglao Bohol Beach 2",
+      "by": "Marife.altabano",
+      "licence": "CC BY-SA 4.0",
+      "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Panglao_Bohol_Beach_2.jpg",
+      "source": "Wikimedia Commons"
+    },
+    {
+      "file": "photo-f49308225-960.webp",
+      "files": [
+        "photo-f49308225-500.webp",
+        "photo-f49308225-960.webp"
+      ],
+      "id": "f49308225",
+      "alt": "Moalboal Cebu 4",
+      "by": "P199",
+      "licence": "CC BY-SA 4.0",
+      "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Moalboal_Cebu_4.JPG",
+      "source": "Wikimedia Commons"
+    },
+    {
+      "file": "photo-f58199479.webp",
+      "files": [
+        "photo-f58199479-500.webp",
+        "photo-f58199479-960.webp",
+        "photo-f58199479.webp"
+      ],
+      "id": "f58199479",
+      "alt": "Makati Skyline from Skyway",
+      "by": "Lawrence Ruiz",
+      "licence": "CC BY-SA 4.0",
+      "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Makati_Skyline_from_Skyway.jpg",
+      "source": "Wikimedia Commons"
+    },
+    {
+      "file": "photo-f119916477-960.webp",
+      "files": [
+        "photo-f119916477-500.webp",
+        "photo-f119916477-960.webp"
+      ],
+      "id": "f119916477",
+      "alt": "Rest house in Nora's Island Resort",
+      "by": "MarvinBikolano",
+      "licence": "CC BY-SA 4.0",
+      "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Rest_house_in_Nora%27s_Island_Resort.jpg",
+      "source": "Wikimedia Commons"
+    },
+    {
+      "file": "photo-f90567265-960.webp",
+      "files": [
+        "photo-f90567265-500.webp",
+        "photo-f90567265-960.webp"
+      ],
+      "id": "f90567265",
+      "alt": "Bahay Kubo - Ifugao house",
+      "by": "Lien Bryan™",
+      "licence": "CC BY 2.0",
+      "licenceUrl": "https://creativecommons.org/licenses/by/2.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Bahay_Kubo_-_Ifugao_house.jpg",
+      "source": "Wikimedia Commons"
+    },
+    {
+      "file": "photo-f78973601-960.webp",
+      "files": [
+        "photo-f78973601-500.webp",
+        "photo-f78973601-960.webp"
+      ],
+      "id": "f78973601",
+      "alt": "Nipa hut in Camiguin",
+      "by": "Ira Villanueva",
+      "licence": "CC BY-SA 4.0",
+      "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Nipa_hut_in_Camiguin.jpg",
+      "source": "Wikimedia Commons"
+    },
+    {
+      "file": "photo-f129305515.webp",
+      "files": [
+        "photo-f129305515-500.webp",
+        "photo-f129305515-960.webp",
+        "photo-f129305515.webp"
+      ],
+      "id": "f129305515",
+      "alt": "Nipa huts 01",
+      "by": "Zarate123",
+      "licence": "CC BY-SA 4.0",
+      "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Nipa_huts_01.jpg",
+      "source": "Wikimedia Commons"
+    },
+    {
+      "file": "photo-f104842288.webp",
+      "files": [
+        "photo-f104842288-500.webp",
+        "photo-f104842288-960.webp",
+        "photo-f104842288.webp"
+      ],
+      "id": "f104842288",
+      "alt": "Bed in hotel room 2",
+      "by": "Kurt Kaiser",
+      "licence": "CC0",
+      "licenceUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "page": "https://commons.wikimedia.org/wiki/File:Bed_in_hotel_room_2.jpg",
+      "source": "Wikimedia Commons"
+    },
+    {
+      "file": "photo-f188531571.webp",
+      "files": [
+        "photo-f188531571-500.webp",
+        "photo-f188531571-960.webp",
+        "photo-f188531571.webp"
+      ],
+      "id": "f188531571",
+      "alt": "Swimming pool and Makuti-thatched villa in Malindi",
+      "by": "Lebu Ayiga",
+      "licence": "CC BY-SA 4.0",
+      "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Swimming_pool_and_Makuti-thatched_villa_in_Malindi.jpg",
+      "source": "Wikimedia Commons"
+    },
+    {
+      "file": "photo-f118237819.webp",
+      "files": [
+        "photo-f118237819-500.webp",
+        "photo-f118237819-960.webp",
+        "photo-f118237819.webp"
+      ],
+      "id": "f118237819",
+      "alt": "Corong Corong, El Nido, Palawan Island, Philippines",
+      "by": "Vyacheslav Argenberg",
+      "licence": "CC BY 4.0",
+      "licenceUrl": "https://creativecommons.org/licenses/by/4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Corong_Corong,_El_Nido,_Palawan_Island,_Philippines.jpg",
+      "source": "Wikimedia Commons"
+    },
+    {
+      "file": "photo-f130426387.webp",
+      "files": [
+        "photo-f130426387-500.webp",
+        "photo-f130426387-960.webp",
+        "photo-f130426387.webp"
+      ],
+      "id": "f130426387",
+      "alt": "Moalboal coast view from Osmeña Peak (Moalboal, Cebu; 01-20-2023)",
+      "by": "Patrickroque01",
+      "licence": "CC BY-SA 4.0",
+      "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Moalboal_coast_view_from_Osme%C3%B1a_Peak_(Moalboal,_Cebu;_01-20-2023).jpg",
+      "source": "Wikimedia Commons"
+    },
+    {
+      "file": "photo-f61429330.webp",
+      "files": [
+        "photo-f61429330-500.webp",
+        "photo-f61429330-960.webp",
+        "photo-f61429330.webp"
+      ],
+      "id": "f61429330",
+      "alt": "Panglao Bohol seen from Bee Farm",
+      "by": "Øyvind Holmstad",
+      "licence": "CC BY-SA 4.0",
+      "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Panglao_Bohol_seen_from_Bee_Farm.jpg",
+      "source": "Wikimedia Commons"
+    },
+    {
+      "file": "photo-f129550247-960.webp",
+      "files": [
+        "photo-f129550247-500.webp",
+        "photo-f129550247-960.webp"
+      ],
+      "id": "f129550247",
+      "alt": "Amakan (woven split bamboo panels) from the Philippines and nipa leaves roofing 01",
+      "by": "Obsidian Soul",
+      "licence": "CC0",
+      "licenceUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "page": "https://commons.wikimedia.org/wiki/File:Amakan_(woven_split_bamboo_panels)_from_the_Philippines_and_nipa_leaves_roofing_01.jpg",
+      "source": "Wikimedia Commons"
+    },
+    {
+      "file": "photo-f17317720-960.webp",
+      "files": [
+        "photo-f17317720-500.webp",
+        "photo-f17317720-960.webp"
+      ],
+      "id": "f17317720",
+      "alt": "Swimming pool, Tran Le Xuan Villa 01",
+      "by": "Diane Selwyn",
+      "licence": "CC BY-SA 3.0",
+      "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Swimming_pool,_Tran_Le_Xuan_Villa_01.jpg",
+      "source": "Wikimedia Commons"
+    },
+    {
+      "file": "photo-f130389166.webp",
+      "files": [
+        "photo-f130389166-500.webp",
+        "photo-f130389166-960.webp",
+        "photo-f130389166.webp"
+      ],
+      "id": "f130389166",
+      "alt": "Bonifacio Global City from air (Taguig; 09-09-2022)",
+      "by": "Patrickroque01",
+      "licence": "CC BY-SA 4.0",
+      "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Bonifacio_Global_City_from_air_(Taguig;_09-09-2022).jpg",
+      "source": "Wikimedia Commons"
+    },
+    {
+      "file": "photo-f133467638.webp",
+      "files": [
+        "photo-f133467638-500.webp",
+        "photo-f133467638-960.webp",
+        "photo-f133467638.webp"
+      ],
+      "id": "f133467638",
+      "alt": "Fort Bonifacio Global City (Taguig Metro Manila) 39",
+      "by": "SJasminum",
+      "licence": "CC BY-SA 4.0",
+      "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Fort_Bonifacio_Global_City_(Taguig_Metro_Manila)_39.jpg",
+      "source": "Wikimedia Commons"
+    },
+    {
+      "file": "photo-f123492215-960.webp",
+      "files": [
+        "photo-f123492215-500.webp",
+        "photo-f123492215-960.webp"
+      ],
+      "id": "f123492215",
+      "alt": "Cebu Business Park and IT Park skyline, Kamputhaw (Cebu City; 09-07-2022)",
+      "by": "Patrickroque01",
+      "licence": "CC BY-SA 4.0",
+      "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Cebu_Business_Park_and_IT_Park_skyline,_Kamputhaw_(Cebu_City;_09-07-2022).jpg",
+      "source": "Wikimedia Commons"
+    },
+    {
+      "file": "photo-f160639492-960.webp",
+      "files": [
+        "photo-f160639492-500.webp",
+        "photo-f160639492-960.webp"
+      ],
+      "id": "f160639492",
+      "alt": "Condominiums in Iloilo Business Park",
+      "by": "Merd123",
+      "licence": "CC BY-SA 4.0",
+      "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Condominiums_in_Iloilo_Business_Park.jpg",
+      "source": "Wikimedia Commons"
+    },
+    {
+      "file": "photo-f160438993.webp",
+      "files": [
+        "photo-f160438993-500.webp",
+        "photo-f160438993-960.webp",
+        "photo-f160438993.webp"
+      ],
+      "id": "f160438993",
+      "alt": "Mandurriao Iloilo City skyline 2025",
+      "by": "Merd123",
+      "licence": "CC BY-SA 4.0",
+      "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Mandurriao_Iloilo_City_skyline_2025.jpg",
+      "source": "Wikimedia Commons"
+    },
+    {
+      "file": "photo-f132686539.webp",
+      "files": [
+        "photo-f132686539-500.webp",
+        "photo-f132686539-960.webp",
+        "photo-f132686539.webp"
+      ],
+      "id": "f132686539",
+      "alt": "Tagaytay Ridge view, Makiling-Malepunyo mountain range (Tagaytay, Cavite; 05-07-2023)",
+      "by": "Patrickroque01",
+      "licence": "CC BY-SA 4.0",
+      "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Tagaytay_Ridge_view,_Makiling-Malepunyo_mountain_range_(Tagaytay,_Cavite;_05-07-2023).jpg",
+      "source": "Wikimedia Commons"
+    },
+    {
+      "file": "photo-f73183407.webp",
+      "files": [
+        "photo-f73183407-500.webp",
+        "photo-f73183407-960.webp",
+        "photo-f73183407.webp"
+      ],
+      "id": "f73183407",
+      "alt": "Apartment Living Room 4 2018-09-28",
+      "by": "F ASTILY",
+      "licence": "CC BY-SA 4.0",
+      "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Apartment_Living_Room_4_2018-09-28.jpg",
+      "source": "Wikimedia Commons"
+    },
+    {
+      "file": "photo-f187101720.webp",
+      "files": [
+        "photo-f187101720-500.webp",
+        "photo-f187101720-960.webp",
+        "photo-f187101720.webp"
+      ],
+      "id": "f187101720",
+      "alt": "Modern living room with stylish furniture and a view of the outdoors in a cozy apartment setting",
+      "by": "Shixart1985",
+      "licence": "CC BY 2.0",
+      "licenceUrl": "https://creativecommons.org/licenses/by/2.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Modern_living_room_with_stylish_furniture_and_a_view_of_the_outdoors_in_a_cozy_apartment_setting.jpg",
+      "source": "Wikimedia Commons"
+    },
+    {
+      "file": "photo-f165047557.webp",
+      "files": [
+        "photo-f165047557-500.webp",
+        "photo-f165047557-960.webp",
+        "photo-f165047557.webp"
+      ],
+      "id": "f165047557",
+      "alt": "The living room that needs houseplants",
+      "by": "Lo",
+      "licence": "CC0",
+      "licenceUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "page": "https://commons.wikimedia.org/wiki/File:The_living_room_that_needs_houseplants.jpg",
+      "source": "Wikimedia Commons"
+    },
+    {
+      "file": "photo-f147942740.webp",
+      "files": [
+        "photo-f147942740-500.webp",
+        "photo-f147942740-960.webp",
+        "photo-f147942740.webp"
+      ],
+      "id": "f147942740",
+      "alt": "Studio apartment in Finland",
+      "by": "Aaaatu",
+      "licence": "CC BY-SA 4.0",
+      "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Studio_apartment_in_Finland.jpg",
+      "source": "Wikimedia Commons"
+    },
+    {
+      "file": "photo-f73183392.webp",
+      "files": [
+        "photo-f73183392-500.webp",
+        "photo-f73183392-960.webp",
+        "photo-f73183392.webp"
+      ],
+      "id": "f73183392",
+      "alt": "Apartment Kitchen 1 2018-09-28",
+      "by": "F ASTILY",
+      "licence": "CC BY-SA 4.0",
+      "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Apartment_Kitchen_1_2018-09-28.jpg",
+      "source": "Wikimedia Commons"
+    },
+    {
+      "file": "photo-f196043410-960.webp",
+      "files": [
+        "photo-f196043410-500.webp",
+        "photo-f196043410-960.webp"
+      ],
+      "id": "f196043410",
+      "alt": "Cozy bedroom with suitcase and natural light from the window in a modern apartment setting",
+      "by": "Shixart1985",
+      "licence": "CC BY 2.0",
+      "licenceUrl": "https://creativecommons.org/licenses/by/2.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Cozy_bedroom_with_suitcase_and_natural_light_from_the_window_in_a_modern_apartment_setting.jpg",
+      "source": "Wikimedia Commons"
+    },
+    {
+      "file": "photo-f27294315.webp",
+      "files": [
+        "photo-f27294315-500.webp",
+        "photo-f27294315-960.webp",
+        "photo-f27294315.webp"
+      ],
+      "id": "f27294315",
+      "alt": "Apartment hotel Nice",
+      "by": "Paikan06",
+      "licence": "CC0",
+      "licenceUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "page": "https://commons.wikimedia.org/wiki/File:Apartment_hotel_Nice.jpg",
+      "source": "Wikimedia Commons"
+    },
+    {
+      "file": "photo-f8971165.webp",
+      "files": [
+        "photo-f8971165-500.webp",
+        "photo-f8971165-960.webp",
+        "photo-f8971165.webp"
+      ],
+      "id": "f8971165",
+      "alt": "Studio Apartment Minneapolis 1",
+      "by": "Jon Platek",
+      "licence": "CC BY-SA 3.0",
+      "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Studio_Apartment_Minneapolis_1.jpg",
+      "source": "Wikimedia Commons"
+    },
+    {
+      "file": "photo-f194508631.webp",
+      "files": [
+        "photo-f194508631-500.webp",
+        "photo-f194508631-960.webp",
+        "photo-f194508631-1280.webp",
+        "photo-f194508631.webp",
+        "photo-f194508631-780x975.webp"
+      ],
+      "id": "f194508631",
+      "alt": "Bedroom in Roxy Beach Apartment",
+      "by": "Cerevisae",
+      "licence": "CC BY-SA 4.0",
+      "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Bedroom_in_Roxy_Beach_Apartment.jpg",
+      "source": "Wikimedia Commons"
+    },
+    {
+      "file": "photo-f148634125.webp",
+      "files": [
+        "photo-f148634125-500.webp",
+        "photo-f148634125-960.webp",
+        "photo-f148634125.webp"
+      ],
+      "id": "f148634125",
+      "alt": "Davao Bajada skyline (Davao City; 04-22-2024)",
+      "by": "Patrickroque01",
+      "licence": "CC BY-SA 4.0",
+      "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Davao_Bajada_skyline_(Davao_City;_04-22-2024).jpg",
+      "source": "Wikimedia Commons"
+    },
+    {
+      "file": "photo-f64558458.webp",
+      "files": [
+        "photo-f64558458-500.webp",
+        "photo-f64558458-960.webp",
+        "photo-f64558458.webp"
+      ],
+      "id": "f64558458",
+      "alt": "\"White Beach\" Boracay, Philippinen",
+      "by": "Grunderfam",
+      "licence": "CC BY-SA 4.0",
+      "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:%22White_Beach%22_Boracay,_Philippinen.jpg",
+      "source": "Wikimedia Commons"
+    },
+    {
+      "file": "photo-f123892940.webp",
+      "files": [
+        "photo-f123892940-500.webp",
+        "photo-f123892940-960.webp",
+        "photo-f123892940.webp"
+      ],
+      "id": "f123892940",
+      "alt": "White beach, Boracay (52265000103)",
+      "by": "Dinesh Valke from Thane, India",
+      "licence": "CC BY-SA 2.0",
+      "licenceUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "page": "https://commons.wikimedia.org/wiki/File:White_beach,_Boracay_(52265000103).jpg",
+      "source": "Wikimedia Commons"
+    },
+    {
+      "file": "photo-f89561115.webp",
+      "files": [
+        "photo-f89561115-500.webp",
+        "photo-f89561115-960.webp",
+        "photo-f89561115.webp"
+      ],
+      "id": "f89561115",
+      "alt": "View from Grand Hyatt Manila overlooking Bonifacio Global City and Makati skylines at sunset",
+      "by": "Mickeyeva",
+      "licence": "CC BY-SA 4.0",
+      "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:View_from_Grand_Hyatt_Manila_overlooking_Bonifacio_Global_City_and_Makati_skylines_at_sunset.jpg",
+      "source": "Wikimedia Commons"
+    }
+  ]
+}
