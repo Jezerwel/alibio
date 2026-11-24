@@ -339,21 +339,6 @@
    "source": "Wikimedia Commons"
   },
   {
-   "file": "photo-f148634125.webp",
-   "files": [
-    "photo-f148634125-500.webp",
-    "photo-f148634125-960.webp",
-    "photo-f148634125.webp"
-   ],
-   "id": "f148634125",
-   "alt": "Davao Bajada skyline (Davao City; 04-22-2024)",
-   "by": "Patrickroque01",
-   "licence": "CC BY-SA 4.0",
-   "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-   "page": "https://commons.wikimedia.org/wiki/File:Davao_Bajada_skyline_(Davao_City;_04-22-2024).jpg",
-   "source": "Wikimedia Commons"
-  },
-  {
    "file": "photo-f160639492-960.webp",
    "files": [
     "photo-f160639492-500.webp",
@@ -531,6 +516,21 @@
    "licence": "CC BY-SA 4.0",
    "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
    "page": "https://commons.wikimedia.org/wiki/File:Bedroom_in_Roxy_Beach_Apartment.jpg",
+   "source": "Wikimedia Commons"
+  },
+  {
+   "file": "photo-f148634125.webp",
+   "files": [
+    "photo-f148634125-500.webp",
+    "photo-f148634125-960.webp",
+    "photo-f148634125.webp"
+   ],
+   "id": "f148634125",
+   "alt": "Davao Bajada skyline (Davao City; 04-22-2024)",
+   "by": "Patrickroque01",
+   "licence": "CC BY-SA 4.0",
+   "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Davao_Bajada_skyline_(Davao_City;_04-22-2024).jpg",
    "source": "Wikimedia Commons"
   }
  ]

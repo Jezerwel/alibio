@@ -32,11 +32,20 @@
   --p-accent: #013160; --p-accent-ink: #f3e9df; --p-action: #076d6f; --p-action-ink: #f3e9df;
   --p-inv-bg: #1e1c1c; --p-inv-surface: #2a2827; --p-inv-ink: #f3e9df; --p-inv-muted: #9a948e;
   --p-inv-accent: #f3e9df; --p-inv-accent-ink: #1e1c1c; --p-inv-action: #f3e9df; --p-inv-action-ink: #1e1c1c;
-  --font-display: "Literata", Georgia, serif;
-  --font-text: "Figtree", system-ui, sans-serif;
+  --font-display: "TT Ramillas", "Literata", Georgia, serif;
+  --font-text: "Proxima Nova", "proxima-nova", "Figtree", system-ui, sans-serif;
   --display-weight: 400;
   --display-tracking: -0.02em;
 }
+/* the brand kit's faces: TT Ramillas (headings) and Proxima Nova (text). Both are paid fonts: put the licensed web
+   files in assets/fonts/ under these names (assets/fonts/README.md). Until they are there, an installed copy is used
+   through local(), else Literata and Figtree stand in. */
+@font-face { font-family: "TT Ramillas"; font-weight: 400; font-style: normal; font-display: swap;
+  src: local("TT Ramillas"), local("TTRamillas-Regular"), url("assets/fonts/TTRamillas-Regular.woff2") format("woff2"); }
+@font-face { font-family: "Proxima Nova"; font-weight: 400; font-style: normal; font-display: swap;
+  src: local("Proxima Nova"), local("ProximaNova-Regular"), url("assets/fonts/ProximaNova-Regular.woff2") format("woff2"); }
+@font-face { font-family: "Proxima Nova"; font-weight: 500; font-style: normal; font-display: swap;
+  src: local("Proxima Nova Medium"), local("ProximaNova-Medium"), url("assets/fonts/ProximaNova-Medium.woff2") format("woff2"); }
 </style>
 <script>document.documentElement.classList.add('m-enter');setTimeout(()=>document.documentElement.classList.add('m-enter-done'),700)</script>
 <script>document.documentElement.classList.add('mo-js');setTimeout(()=>document.documentElement.classList.add('mo-safe'),2500)</script>
@@ -46,52 +55,62 @@
 <style>
   /* page CSS: the type moment (sections.md section 4), the visit panel, the menu cards' panel height */
   .menu-card .panel { --p-h: 200px; }
-  .tile__facts { font-size: 16px; line-height: 24px; margin-top: 0; }
+  /* condo card: name, price a night, city and facts, the Airbnb link; one line each so a row lines up */
+  .tile__name { margin: 0; font: 500 var(--t-card)/1.3 var(--font-text); letter-spacing: -0.01em; }
+  .tile__price { margin: calc(-1 * var(--s-3)) 0 0; font-variant-numeric: tabular-nums; }
+  .tile__facts { font-size: 16px; line-height: 24px; margin: 0; color: var(--muted); }
   .tile__book { display: inline-flex; align-items: center; gap: 8px; font-weight: 500; }
   .tile__book .ic { width: 20px; height: 20px; }
-  /* under 1024 the four condos sit two-up, so the section keeps its screen */
-  @media (max-width: 1023px) { #homes .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } #homes .grid > .tile { grid-column: auto; } #homes .tile__head { flex-wrap: wrap; } }
-  @media (min-width: 640px) and (max-width: 1023px) { #visit .pl-photo > img { aspect-ratio: 2 / 1; object-fit: cover; } #homes .tile__media { --tile-ratio: 3 / 2; } }
-  /* a phone gives the four condos two screens, the photographs upright */
-  @media (max-width: 639px) { #homes .tile__media { --tile-ratio: 4 / 5; } #visit .visit__rows > li { flex-direction: row; align-items: center; justify-content: space-between; } #visit .visit__rows > li > :last-child { text-align: right; } }
+  /* the hero photograph takes what the words leave of the first screen */
+  @media (min-width: 1024px) { .hero.hero--place { --photo: max(min(480px, 53svh), calc(100svh - 300px)); } }
+  /* the booking statement is the page's type moment: set large across the wrap */
+  #booking .mo-wh__text { font-size: clamp(32px, 4.4vw, 64px); line-height: 1.12; max-width: 1100px; }
+  /* the districts are the panel's content: ink, the district in 500, the map link at the right */
+  .visit__districts > li > :first-child { color: var(--ink); }
+  .visit__district { font-weight: 500; }
+  .visit .t-label + .visit__rows { margin-top: calc(-1 * var(--s-2)); }
+  /* the brand kit's logos (brand board page 4): the mark-and-wordmark lockup in the nav, the primary logo in the footer */
+  .nav__logo .logo-lockup { height: 32px; width: auto; }
+  .nav__logo .logo-primary { height: 88px; width: auto; }
+  @media (max-width: 639px) { .nav__logo .logo-lockup { height: 28px; } .nav__logo .logo-primary { height: 72px; } }
+  /* the four condos as two pairs: one row of four from 1024, two rows of two on a tablet, a list on a phone
+     (.g2m: the second pair starts the phone's second screen, so no card sits under the phone bar) */
+  #homes .homes__pair { grid-template-columns: repeat(2, minmax(0, 1fr)); align-content: start; }
+  #homes .homes__pair > .tile { grid-column: auto; }
+  @media (min-width: 640px) {
+    #homes .wrap { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--s-5); align-content: start; }
+    #homes .group, #homes .homes__pair { display: contents; }
+    #homes .section-head { grid-column: 1 / -1; }
+  }
+  @media (min-width: 1024px) { #homes .wrap { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+  @media (min-width: 640px) and (max-width: 1023px) { #visit .pl-photo > img { aspect-ratio: 2 / 1; object-fit: cover; } #homes .tile__media { --tile-ratio: 2 / 1; } }
+  @media (max-width: 639px) {
+    #homes .homes__pair { grid-template-columns: minmax(0, 1fr); row-gap: var(--s-5); }
+    #homes .homes__pair > .tile { grid-template-columns: 136px minmax(0, 1fr); column-gap: var(--s-4); row-gap: var(--s-2); }
+    #homes .tile__media { --tile-ratio: 4 / 5; grid-column: 1; grid-row: 1 / span 4; }
+    #homes .tile > :not(.tile__media) { grid-column: 2; }
+    #homes .tile__price { margin: 0; }
+    #visit .pl-photo > img { aspect-ratio: 2 / 1; max-height: none; flex: none; object-fit: cover; }
+    #visit .visit__rows > li { flex-direction: row; align-items: center; justify-content: space-between; } #visit .visit__rows > li > :last-child { text-align: right; }
+  }
+  @media (max-width: 359px) { #homes .homes__pair > .tile { grid-template-columns: 104px minmax(0, 1fr); } }
 </style>
 </head>
 <body>
 <!-- type: place (furnished condos for short stays, every one booked on Airbnb)
      deal: hero place (printed), nav nav-cards, footer footer-columns, rhythm colour-band (the close on .ground-brand,
      navy #013160 from the client's kit: blue green holds only 5.1:1 against the band's 7:1 rule), buttons arrow,
-     mark arc, the offer as rooms (layout row: four on span-3), the place's composition bleed (not used: over 6 screens the place is dropped), type moment address (not used: a business in four cities has no one street, and the re-deal, name, needs close-word, which never sits on colour-band)
-     palette: the client's own kit (start.mjs brand), type literata (Literata / Figtree, a Google stand-in for
-     TT Ramillas / Proxima Nova)
+     mark: the client's own logos from the brand board (page 4) in place of the dealt arc, the offer as rooms (layout row: four on span-3), the place's composition bleed (not used: over 6 screens the place is dropped), type moment address (not used: a business in four cities has no one street, and the re-deal, name, needs close-word, which never sits on colour-band)
+     palette: the client's own kit (start.mjs brand), type: the brand kit's TT Ramillas / Proxima Nova (the client's
+     ask), with the dealt pairing literata (Literata / Figtree) as the fallback until the licensed files are in assets/fonts
      moments: word-highlight in #booking (photo-chapters was also dealt; dropped: its 4 screens put a place page at 10, over the 7-screen limit) -->
 
 <header class="nav">
   <div class="wrap nav__bar">
     <a class="skip-link" href="#top">Skip to content</a>
-    <a class="nav__logo" href="#top"><span class="mark" data-mark="arc" aria-hidden="true"></span>Alibio</a>
+    <a class="nav__logo" href="#top"><img class="logo-lockup" src="assets/brand/alibio-lockup.svg" alt="Alibio" width="91" height="32"></a>
     <nav class="nav__links" aria-label="Main">
-      <div class="nav__item">
-        <a class="nav__link" href="#homes">Condos <svg class="chev" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 4.5l3 3 3-3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-        <div class="nav__menu">
-          <div class="wrap grid">
-            <a class="menu-card span-4" href="#homes">
-              <div class="panel"><img class="frame__img" src="assets/img/photo-f147942740-500.webp" alt="A bright studio with a window wall, plants and a small dining table" width="500" height="333" loading="lazy"></div>
-              <span class="t-card">Studios</span>
-              <span class="t-small muted">For two guests, from ₱2,950 a night</span>
-            </a>
-            <a class="menu-card span-4" href="#homes">
-              <div class="panel"><img class="frame__img" src="assets/img/photo-f187101720-500.webp" alt="A living room with a tan sofa, a low table and a balcony door" width="500" height="333" loading="lazy"></div>
-              <span class="t-card">One-bedroom condos</span>
-              <span class="t-small muted">For two or three guests, from ₱2,650</span>
-            </a>
-            <a class="menu-card span-4" href="#homes">
-              <div class="panel"><img class="frame__img" src="assets/img/photo-f73183392-500.webp" alt="A kitchen with wood cabinets and a granite island" width="500" height="342" loading="lazy"></div>
-              <span class="t-card">Two-bedroom condos</span>
-              <span class="t-small muted">For up to five guests, from ₱4,300</span>
-            </a>
-          </div>
-        </div>
-      </div>
+      <div class="nav__item"><a class="nav__link" href="#homes">Condos</a></div>
       <div class="nav__item"><a class="nav__link" href="#visit">Locations</a></div>
       <div class="nav__item"><a class="nav__link" href="#booking">Booking</a></div>
     </nav>
@@ -124,7 +143,12 @@
       <div class="grid grid--top">
         <div class="visit visit--card span-6">
           <p class="t-label">Districts</p>
-          <address class="visit__address" data-assumed>Salcedo Village, Makati<br>IT Park, Cebu City<br>Bajada, Davao City<br>Mandurriao, Iloilo City</address>
+          <ul class="visit__rows visit__districts" data-assumed>
+            <li><span><span class="visit__district">Salcedo Village</span>, Makati</span><a class="link" href="https://www.openstreetmap.org/search?query=Salcedo%20Village%20Makati" target="_blank" rel="noopener" aria-label="See the area around Salcedo Village, Makati">See the area</a></li>
+            <li><span><span class="visit__district">IT Park</span>, Cebu City</span><a class="link" href="https://www.openstreetmap.org/search?query=IT%20Park%20Cebu%20City" target="_blank" rel="noopener" aria-label="See the area around IT Park, Cebu City">See the area</a></li>
+            <li><span><span class="visit__district">Bajada</span>, Davao City</span><a class="link" href="https://www.openstreetmap.org/search?query=Bajada%20Davao%20City" target="_blank" rel="noopener" aria-label="See the area around Bajada, Davao City">See the area</a></li>
+            <li><span><span class="visit__district">Mandurriao</span>, Iloilo City</span><a class="link" href="https://www.openstreetmap.org/search?query=Mandurriao%20Iloilo%20City" target="_blank" rel="noopener" aria-label="See the area around Mandurriao, Iloilo City">See the area</a></li>
+          </ul>
           <ul class="visit__rows" data-assumed>
             <li><span>Check-in</span><span>From 14:00, self check-in</span></li>
             <li><span>Check-out</span><span>By 11:00</span></li>
@@ -135,35 +159,42 @@
     </div>
   </section>
 
-  <section class="section" id="homes" style="--hm: 2" aria-labelledby="homes-h">
+  <section class="section g2m" id="homes" aria-labelledby="homes-h">
     <div class="wrap">
-      <div class="section-head">
-        <h2 id="homes-h">Condos and prices</h2>
-        <p>Prices are per night and change with your dates on Airbnb.</p>
-      </div>
-      <div class="grid">
-          <a class="tile span-3" href="https://www.airbnb.com/s/Makati--Philippines/homes" target="_blank" rel="noopener">
+      <div class="group">
+        <div class="section-head">
+          <h2 id="homes-h">Condos and prices</h2>
+        </div>
+        <div class="grid homes__pair">
+          <a class="tile" href="https://www.airbnb.com/s/Makati--Philippines/homes" target="_blank" rel="noopener">
             <div class="tile__media"><img src="assets/img/photo-f147942740-960.webp" srcset="assets/img/photo-f147942740-320.webp 320w, assets/img/photo-f147942740-500.webp 500w, assets/img/photo-f147942740-960.webp 960w, assets/img/photo-f147942740.webp 1280w" sizes="(max-width: 639px) 80vw, (max-width: 1023px) 50vw, 282px" width="960" height="640" alt="A bright studio with a window wall, plants and a small dining table" loading="lazy" decoding="async" data-source="stand-in" data-subject="a studio condo"></div>
-            <div class="tile__head"><h3>Condo in Salcedo Village</h3><span class="tile__price" data-assumed>₱2,950</span></div>
-            <p class="tile__facts">Studio · Makati · 2 guests · 26 m²</p>
+            <h3 class="tile__name">Condo in Salcedo Village</h3>
+            <p class="tile__price"><span data-assumed>₱2,950</span> a night</p>
+            <p class="tile__facts">Makati<br><span data-assumed>Studio, 26 m², 2 guests</span></p>
             <span class="tile__book link"><img class="ic" data-icon="airbnb" src="assets/icons/airbnb.svg" alt="" width="20" height="20" loading="lazy">Book on Airbnb</span>
           </a>
-          <a class="tile span-3" href="https://www.airbnb.com/s/Cebu-City--Philippines/homes" target="_blank" rel="noopener">
+          <a class="tile" href="https://www.airbnb.com/s/Cebu-City--Philippines/homes" target="_blank" rel="noopener">
             <div class="tile__media"><img src="assets/img/photo-f187101720-960.webp" srcset="assets/img/photo-f187101720-320.webp 320w, assets/img/photo-f187101720-500.webp 500w, assets/img/photo-f187101720-960.webp 960w, assets/img/photo-f187101720.webp 1280w" sizes="(max-width: 639px) 80vw, (max-width: 1023px) 50vw, 282px" width="960" height="640" alt="A living room with a tan sofa, a low table and a balcony door" loading="lazy" decoding="async" data-source="stand-in" data-subject="a one-bedroom condo"></div>
-            <div class="tile__head"><h3>Condo in IT Park</h3><span class="tile__price" data-assumed>₱3,400</span></div>
-            <p class="tile__facts">1 bedroom · Cebu City · 3 guests · 42 m²</p>
+            <h3 class="tile__name">Condo in IT Park</h3>
+            <p class="tile__price"><span data-assumed>₱3,400</span> a night</p>
+            <p class="tile__facts">Cebu City<br><span data-assumed>1 bedroom, 42 m², 3 guests</span></p>
             <span class="tile__book link"><img class="ic" data-icon="airbnb" src="assets/icons/airbnb.svg" alt="" width="20" height="20" loading="lazy">Book on Airbnb</span>
           </a>
-          <a class="tile span-3" href="https://www.airbnb.com/s/Davao-City--Philippines/homes" target="_blank" rel="noopener">
+        </div>
+      </div>
+      <div class="grid homes__pair">
+        <a class="tile" href="https://www.airbnb.com/s/Davao-City--Philippines/homes" target="_blank" rel="noopener">
             <div class="tile__media"><img src="assets/img/photo-f165047557-960.webp" srcset="assets/img/photo-f165047557-320.webp 320w, assets/img/photo-f165047557-500.webp 500w, assets/img/photo-f165047557-960.webp 960w, assets/img/photo-f165047557.webp 1280w" sizes="(max-width: 639px) 80vw, (max-width: 1023px) 50vw, 282px" width="960" height="720" alt="A dining corner by a floor-to-ceiling window with shelves and four chairs" loading="lazy" decoding="async" data-source="stand-in" data-subject="a one-bedroom condo"></div>
-            <div class="tile__head"><h3>Condo in Bajada</h3><span class="tile__price" data-assumed>₱2,650</span></div>
-            <p class="tile__facts">1 bedroom · Davao City · 2 guests · 38 m²</p>
+            <h3 class="tile__name">Condo in Bajada</h3>
+            <p class="tile__price"><span data-assumed>₱2,650</span> a night</p>
+            <p class="tile__facts">Davao City<br><span data-assumed>1 bedroom, 38 m², 2 guests</span></p>
             <span class="tile__book link"><img class="ic" data-icon="airbnb" src="assets/icons/airbnb.svg" alt="" width="20" height="20" loading="lazy">Book on Airbnb</span>
           </a>
-          <a class="tile span-3" href="https://www.airbnb.com/s/Iloilo-City--Philippines/homes" target="_blank" rel="noopener">
+        <a class="tile" href="https://www.airbnb.com/s/Iloilo-City--Philippines/homes" target="_blank" rel="noopener">
           <div class="tile__media"><img src="assets/img/photo-f73183392-960.webp" srcset="assets/img/photo-f73183392-320.webp 320w, assets/img/photo-f73183392-500.webp 500w, assets/img/photo-f73183392-960.webp 960w, assets/img/photo-f73183392.webp 1280w" sizes="(max-width: 639px) 80vw, (max-width: 1023px) 50vw, 282px" width="960" height="657" alt="A kitchen with wood cabinets, a black fridge and a granite island" loading="lazy" decoding="async" data-source="stand-in" data-subject="a two-bedroom condo"></div>
-          <div class="tile__head"><h3>Condo in Mandurriao</h3><span class="tile__price" data-assumed>₱4,300</span></div>
-          <p class="tile__facts">2 bedrooms · Iloilo City · 5 guests · 64 m²</p>
+          <h3 class="tile__name">Condo in Mandurriao</h3>
+          <p class="tile__price"><span data-assumed>₱4,300</span> a night</p>
+          <p class="tile__facts">Iloilo City<br><span data-assumed>2 bedrooms, 64 m², 5 guests</span></p>
           <span class="tile__book link"><img class="ic" data-icon="airbnb" src="assets/icons/airbnb.svg" alt="" width="20" height="20" loading="lazy">Book on Airbnb</span>
         </a>
       </div>
@@ -186,17 +217,17 @@
         <div><h2 id="close-h">Book a condo for your next trip</h2><p class="t-lead">Four condos, from <span data-assumed>₱2,650</span> a night on Airbnb.</p></div>
         <a class="btn btn--primary" href="#homes">Book a stay<svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8"/><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a>
       </div>
-      <div class="close__media"><img src="assets/img/photo-f58199479.webp" srcset="assets/img/photo-f58199479-500.webp 500w, assets/img/photo-f58199479-960.webp 960w, assets/img/photo-f58199479.webp 1280w" sizes="(max-width: 639px) 160vw, 1200px" width="1280" height="962" alt="The towers of the Makati business district under a summer sky" loading="lazy" decoding="async" data-source="stand-in" data-subject="Makati, where two of the condos are"></div>
+      <div class="close__media"><img src="assets/img/photo-f148634125.webp" srcset="assets/img/photo-f148634125-500.webp 500w, assets/img/photo-f148634125-960.webp 960w, assets/img/photo-f148634125.webp 1280w" sizes="(max-width: 639px) 160vw, 1200px" width="1280" height="960" alt="High-rise towers of Davao City against green hills under a clear sky" loading="lazy" decoding="async" data-source="stand-in" data-subject="Davao City, where one of the condos is" style="--pos: 50% 55%"></div>
     </div>
     <div class="closing__links">
       <div class="grid">
         <div class="span-4 stack-4">
-          <a class="nav__logo" href="#top"><span class="mark" data-mark="arc" aria-hidden="true"></span>Alibio</a>
+          <a class="nav__logo footer__logo" href="#top"><img class="logo-primary" src="assets/brand/alibio-primary-ivory.svg" alt="Alibio" width="151" height="88"></a>
           <p class="footer__lede">Comfort that puts you at ease</p>
         </div>
-        <div class="span-2 footer__col"><h3>Condos</h3><ul><li><a href="#homes">Prices</a></li><li><a href="#homes">Studios</a></li></ul></div>
-        <div class="span-2 footer__col"><h3>Locations</h3><ul><li><a href="#visit">Districts</a></li><li><a href="#visit">Check-in</a></li></ul></div>
-        <div class="span-2 footer__col"><h3>Booking</h3><ul><li><a href="#booking">How it works</a></li><li><a href="https://www.airbnb.com/help" target="_blank" rel="noopener">Airbnb help</a></li></ul></div>
+        <div class="span-2 footer__col"><h3>Condos</h3><ul><li><a href="#homes">Condos and prices</a></li></ul></div>
+        <div class="span-2 footer__col"><h3>Locations</h3><ul><li><a href="#visit">Districts and check-in</a></li></ul></div>
+        <div class="span-2 footer__col"><h3>Booking</h3><ul><li><a href="#booking">How booking works</a></li><li><a href="https://www.airbnb.com/help" target="_blank" rel="noopener">Airbnb help</a></li></ul></div>
         <div class="span-2 footer__col"><h3>Contact</h3><ul><li><a href="mailto:hello@alibio.example">Email us</a></li></ul></div>
       </div>
       <div class="footer__legal">

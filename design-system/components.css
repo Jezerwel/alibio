@@ -1,12 +1,12 @@
 /* Alibio components. Tokens come from tokens.css (generated from tokens.json). */
 @import url("https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,400..600&family=Figtree:wght@400..600&display=swap");
 
-.ab { font-family: var(--font-text, "Figtree", system-ui, sans-serif); color: var(--charcoal); background: var(--warm-ivory); font-size: 16px; line-height: 26px; }
+.ab { font-family: var(--font-text, "Proxima Nova", "proxima-nova", "Figtree", system-ui, sans-serif); color: var(--charcoal); background: var(--warm-ivory); font-size: 16px; line-height: 26px; }
 .ab *, .ab *::before, .ab *::after { box-sizing: border-box; }
 .ab-row { display: flex; flex-wrap: wrap; gap: var(--space-4); align-items: center; padding: var(--space-5); }
 
 /* Button */
-.ab-btn { display: inline-flex; align-items: center; gap: var(--space-2); height: var(--button-height); padding: 0 var(--space-5); border-radius: var(--radius-control); font: 500 16px/1 var(--font-text, "Figtree", sans-serif); text-decoration: none; border: 1px solid transparent; cursor: pointer; transition: transform 160ms ease, background-color 160ms ease; }
+.ab-btn { display: inline-flex; align-items: center; gap: var(--space-2); height: var(--button-height); padding: 0 var(--space-5); border-radius: var(--radius-control); font: 500 16px/1 var(--font-text, "Proxima Nova", "Figtree", sans-serif); text-decoration: none; border: 1px solid transparent; cursor: pointer; transition: transform 160ms ease, background-color 160ms ease; }
 .ab-btn--primary { background: var(--blue-green); color: var(--warm-ivory); }
 .ab-btn--primary:hover { background: #0a7c7e; transform: translateY(-1px); }
 .ab-btn--primary:active { transform: translateY(1px); }
@@ -25,7 +25,7 @@
 .ab-card__media img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 600ms ease; }
 .ab-card:hover .ab-card__media img { transform: scale(1.03); }
 .ab-card__head { display: flex; justify-content: space-between; align-items: baseline; gap: var(--space-4); }
-.ab-card__head h3 { margin: 0; font: 500 20px/28px var(--font-text, "Figtree", sans-serif); }
+.ab-card__head h3 { margin: 0; font: 500 20px/28px var(--font-text, "Proxima Nova", "Figtree", sans-serif); }
 .ab-card__price { font-variant-numeric: tabular-nums; white-space: nowrap; }
 .ab-card__facts { margin: 0; color: var(--ink-muted); }
 .ab-card__book { display: inline-flex; align-items: center; gap: var(--space-2); color: var(--blue-green); font-weight: 500; text-decoration: underline; text-underline-offset: 4px; }
@@ -41,7 +41,7 @@
 
 /* Nav bar */
 .ab-nav { display: flex; align-items: center; gap: var(--space-6); height: var(--nav-height); padding: 0 var(--space-5); background: var(--warm-ivory); border-bottom: 1px solid var(--line); }
-.ab-nav__logo { display: inline-flex; align-items: center; gap: var(--space-2); font: 400 20px/1 var(--font-display, "Literata", serif); color: var(--charcoal); text-decoration: none; letter-spacing: -0.02em; }
+.ab-nav__logo { display: inline-flex; align-items: center; gap: var(--space-2); font: 400 20px/1 var(--font-display, "TT Ramillas", "Literata", serif); color: var(--charcoal); text-decoration: none; letter-spacing: -0.02em; }
 .ab-nav__logo img { width: 24px; height: 24px; }
 .ab-nav__links { display: flex; gap: var(--space-5); margin-right: auto; }
 .ab-nav__links a { font-size: 15px; font-weight: 500; color: var(--charcoal); text-decoration: none; background: linear-gradient(currentColor, currentColor) 0 100% / 0 1px no-repeat; transition: background-size 250ms ease; }

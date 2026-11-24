@@ -19,7 +19,7 @@ This system comes from two sources: the Alibio brand kit (the sea palette: Blue 
 - **One action colour.** `blue-green` marks the primary button, links and the focus ring, nothing else. Exactly one filled button per view.
 - **One brand band.** `navy-blue` fills the closing section, with ivory text and an ivory button. Do not use navy for buttons on the ivory ground.
 - **Avocado is reserved** for print and social. It has no web role.
-- **Type.** Headings use the display serif at 400 with -0.02em tracking (`h1` 48/53, `h2` 32/40); everything else uses the text sans (`body` 16/26, `title` 20/28 at 500, `label` 13/16 at 500). The brand kit names TT Ramillas and Proxima Nova. Both need paid web licences, so the site uses Literata and Figtree from Google Fonts as stand-ins. Swap the two `type.families` values when the licences are in place.
+- **Type.** Headings use TT Ramillas at 400 with -0.02em tracking (`h1` 48/53, `h2` 32/40); everything else uses Proxima Nova (`body` 16/26 at 400, `title` 20/28 and `label` 13/16 at 500). Both are paid fonts: the site loads licensed WOFF2 files from `assets/fonts/` (TTRamillas-Regular, ProximaNova-Regular, ProximaNova-Medium) or an Adobe Fonts kit for Proxima Nova. Until those are in place, Literata and Figtree from Google Fonts stand in, as the second family in each stack.
 - **Square corners.** Photographs, cards and panels use `radius-none`. Buttons and fields use `radius-control` (2px).
 - **Layout.** A 12-column grid, 24px gutter, content 1200px wide at 1440. The hero fills the first screen; every section is one screen tall at 1440x900. Text on the left, picture on the right, never mirrored.
 - **Photographs.** Real condo rooms in daylight, the whole room, straight on. No text, filter, rounded corner or shadow on a photograph. A linked photograph zooms to 1.03 inside its frame on hover; its card lifts 2px.
@@ -27,7 +27,7 @@ This system comes from two sources: the Alibio brand kit (the sea palette: Blue 
 
 ## Iconography
 
-The site uses one third-party mark: the Airbnb icon, in its own colours, beside "Book on Airbnb". It is Airbnb's trademark: never recolour it, never use it as Alibio's mark. The Alibio logo (an arch with a star over the ALIBIO wordmark, and a house with a leaf as the brand mark) exists only as a picture in the brand kit. **No SVG of it is in this system yet.** Until one is supplied, the site shows the name in the display face beside a plain arch mark (`Logos/alibio-arch.svg`), and that mark is a placeholder.
+The site uses one third-party mark: the Airbnb icon, in its own colours, beside "Book on Airbnb". It is Airbnb's trademark: never recolour it, never use it as Alibio's mark. The Alibio logos come from page 4 of the brand board (`Logos` group): the mark-and-wordmark lockup sits in the nav, the house-and-leaf brand mark is the favicon, and the primary logo (the arch over ALIBIO) sits in ivory on the navy footer. Use the lockup at 32px tall on desktop and 28px on a phone; never redraw, stretch or recolour them outside the palette.
 
 ## Usage rules
 
