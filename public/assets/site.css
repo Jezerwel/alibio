@@ -60,8 +60,8 @@
     #cities .cities__pair > .cities__photo { grid-column: auto; aspect-ratio: 3 / 5; }
   }
   @media (max-width: 639px) {
-    #homes .homes__trio { grid-template-columns: minmax(0, 1fr); row-gap: var(--s-4); }
-    #homes .homes__trio > .tile { grid-template-columns: 96px minmax(0, 1fr); column-gap: var(--s-4); row-gap: var(--s-1); }
+    #homes .homes__trio { grid-template-columns: minmax(0, 1fr); row-gap: var(--s-3); }
+    #homes .homes__trio > .tile { grid-template-columns: 120px minmax(0, 1fr); column-gap: var(--s-4); row-gap: var(--s-1); }
     #homes .tile__book .ic { display: none; }
     #homes .tile__media { --tile-ratio: 4 / 5; grid-column: 1; grid-row: 1 / span 4; }
     #homes .tile > :not(.tile__media) { grid-column: 2; }
@@ -85,8 +85,10 @@
 
 /* condo details: a centred dialog from 640 (Radix), a bottom drawer on a phone (Vaul); the kit's tokens */
 .details__overlay { position: fixed; inset: 0; z-index: 60; background: rgb(30 28 28 / .5); }
-.details { position: fixed; z-index: 61; background: var(--p-bg); color: var(--p-ink); outline: none; overflow: auto; }
-.details--dialog { left: 50%; top: 50%; transform: translate(-50%, -50%); width: min(960px, calc(100vw - 48px)); max-height: calc(100svh - 48px); border-radius: 2px; }
+.details { --ease-out-strong: cubic-bezier(0.23, 1, 0.32, 1); }
+.details { position: fixed; z-index: 61; background: var(--p-bg); color: var(--p-ink); outline: none; overflow: auto; overscroll-behavior: contain; }
+.details--dialog { left: 50%; top: 50%; transform: translate(-50%, -50%); width: min(960px, calc(100vw - 48px)); max-height: calc(100svh - 48px); border-radius: 2px;
+  border: 1px solid transparent; box-shadow: 0 1px 2px oklch(0 0 0 / 0.06), 0 8px 24px oklch(0 0 0 / 0.12), 0 24px 64px oklch(0 0 0 / 0.18); }
 .details--drawer { left: 0; right: 0; bottom: 0; max-height: 92svh; border-radius: 12px 12px 0 0; padding-bottom: env(safe-area-inset-bottom); }
 .details__grip { width: 40px; height: 4px; border-radius: 2px; background: color-mix(in oklab, var(--p-ink) 25%, transparent); margin: 12px auto 0; }
 .details__body { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
@@ -95,8 +97,10 @@
 .details__text { padding: var(--s-7); display: grid; gap: var(--s-4); align-content: start; }
 .details__head { display: flex; align-items: start; justify-content: space-between; gap: var(--s-4); }
 .details__title { margin: 0; font: var(--display-weight) 32px/40px var(--font-display); letter-spacing: var(--display-tracking); }
-.details__close { flex: none; display: grid; place-items: center; width: 44px; height: 44px; margin: -8px -8px 0 0; background: none; border: 0; color: var(--p-ink); cursor: pointer; border-radius: 2px; }
-.details__close:hover { background: var(--p-surface); }
+.details__close { flex: none; display: grid; place-items: center; width: 44px; height: 44px; margin: -8px -8px 0 0; background: none; border: 0; color: var(--p-ink); cursor: pointer; border-radius: 2px;
+  -webkit-tap-highlight-color: transparent; transition-property: background-color, scale; transition-duration: 150ms; transition-timing-function: ease-out; }
+@media (hover: hover) { .details__close:hover { background: var(--p-surface); } }
+.details__close:active { scale: 0.96; }
 .details__where, .details__summary { margin: 0; }
 .details__where { color: var(--p-muted); margin-top: calc(-1 * var(--s-3)); }
 .details__price { margin: 0; font-size: 20px; line-height: 30px; font-variant-numeric: tabular-nums; }
@@ -115,4 +119,31 @@
   .details__title { font-size: 24px; line-height: 30px; }
   .details__facts { grid-auto-flow: row; }
   .details__book { justify-self: stretch; justify-content: center; }
+}
+
+/* the dialog opens and closes: overlay fades, panel rises from 0.96 (250ms in, 150ms out, exit shorter than enter).
+   Radix keeps the closing panel mounted until its animation ends. Reduced motion: opacity only. */
+.details__overlay--dialog[data-state="open"] { animation: details-fade-in 200ms ease-out both; }
+.details__overlay--dialog[data-state="closed"] { animation: details-fade-out 150ms ease-out both; }
+.details--dialog[data-state="open"] { animation: details-fade-in 200ms ease-out both; }
+.details--dialog[data-state="closed"] { animation: details-fade-out 150ms ease-out both; }
+@media (prefers-reduced-motion: no-preference) {
+  .details--dialog[data-state="open"] { animation: details-rise 250ms var(--ease-out-strong) both; }
+  .details--dialog[data-state="closed"] { animation: details-sink 150ms ease-out both; }
+}
+@keyframes details-fade-in { from { opacity: 0; } }
+@keyframes details-fade-out { to { opacity: 0; } }
+@keyframes details-rise { from { opacity: 0; transform: translate(-50%, -48%) scale(0.96); } }
+@keyframes details-sink { to { opacity: 0; transform: translate(-50%, -49%) scale(0.98); } }
+
+/* photographs: a 1px inset outline in pure black at 10% keeps a light photo's edge on the ivory ground
+   (white at 10% on the navy band); the full-bleed hero needs none */
+.tile__media > img, .cities__photo > img, .details__media > img, .pl-photo > img { outline: 1px solid oklch(0 0 0 / 0.1); outline-offset: -1px; }
+.ground-brand .close__media img { outline: 1px solid oklch(1 0 0 / 0.1); outline-offset: -1px; }
+
+/* the condo card is the tap target on a phone: it answers the press, without the grey tap flash */
+@media (max-width: 639px) {
+  .condo .tile__details { -webkit-tap-highlight-color: transparent; }
+  .condo { transition-property: transform, scale; transition-duration: 300ms, 150ms; transition-timing-function: var(--ease, ease), ease-out; }
+  .condo:has(.tile__details:active) { scale: 0.98; }
 }

@@ -105,7 +105,7 @@ export function CondoDetails({ condo, children }: { condo: Condo; children: Reac
     <Dialog.Root>
       <Dialog.Trigger asChild>{Trigger}</Dialog.Trigger>
       <Dialog.Portal>
-        <Dialog.Overlay className="details__overlay" />
+        <Dialog.Overlay className="details__overlay details__overlay--dialog" />
         <Dialog.Content className="details details--dialog" aria-describedby={undefined}>
           <Body
             condo={condo}

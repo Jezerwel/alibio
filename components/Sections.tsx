@@ -68,7 +68,7 @@ function CondoTile({ c }: { c: Condo }) {
     <article className="tile condo">
       <div className="tile__media">
         <img src={`/assets/img/photo-${c.photo.id}-960.webp`} srcSet={srcSet(c.photo)}
-          sizes="(max-width: 639px) 136px, (max-width: 1023px) 33vw, 384px"
+          sizes="(max-width: 639px) 200px, (max-width: 1023px) 33vw, 384px"
           width={c.photo.width} height={c.photo.height} alt={c.photo.alt}
           loading="lazy" decoding="async" data-source="stand-in" data-subject={c.name} />
       </div>
